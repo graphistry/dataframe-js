@@ -25,7 +25,7 @@
         </div>
         <div class="inner-buttons">
             <a href="https://github.com/Gmousse/dataframe-js" class="button"><small>View project on</small> GitHub</a>
-            <a href="./doc/html-api/index.html" class="button"><small>Documentation</small> API</a>
+            <a href="./doc/api.html" class="button"><small>Documentation</small> API</a>
         </div>
       </div>
     </header>
@@ -38,12 +38,16 @@
 
 <p><strong>v1.0.0</strong></p>
 
-<p><img src="https://travis-ci.org/Gmousse/dataframe-js.svg?branch=feature%2Fsql" alt=""></p>
+<p><img src="https://travis-ci.org/Gmousse/dataframe-js.svg?branch=develop" alt=""></p>
+
+<p><strong>Official Website</strong>: <a href="https://gmousse.github.io/dataframe-js/">https://gmousse.github.io/dataframe-js/</a></p>
+
+<p><strong>Changelog</strong>: <a href="https://github.com/Gmousse/dataframe-js/blob/master/CHANGELOG.md">1.0.0</a></p>
 
 <h2>
 <a id="presentation" class="anchor" href="#presentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Presentation</h2>
 
-<p>dataframe-js provides another way to work with data in javascript (browser or server side) by using DataFrame, a data structure already used in some languages (Python, R, ...).</p>
+<p>dataframe-js provides another way to work with data in javascript (browser or server side) by using DataFrame, a data structure already used in some languages (Spark, Python, R, ...).</p>
 
 <p>A DataFrame is simply built on two concepts:</p>
 
@@ -54,7 +58,7 @@
 <strong>Rows</strong> provide ways to modify or filter your data.</li>
 </ul>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(rawData, columns)
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, columns)
 <span class="pl-smi">df</span>.<span class="pl-en">show</span>()
 <span class="pl-c">// DataFrame example</span>
 <span class="pl-k">|</span> column1   <span class="pl-k">|</span> column2   <span class="pl-k">|</span> column3   <span class="pl-k">|</span> <span class="pl-c">// &lt;--- Columns</span>
@@ -101,28 +105,30 @@
 <p>in the browser:</p>
 
 <ul>
-<li><p>not minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/feature/sql/lib/browser/dataframe.js"&gt;&lt;/script&gt;</code></p></li>
-<li><p>minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/feature/sql/lib/browser/dataframe-min.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>not minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/master/lib/browser/dataframe.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/master/lib/browser/dataframe-min.js"&gt;&lt;/script&gt;</code></p></li>
 </ul>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Complete API documentation: <a href="./doc/index.md">Index</a></p>
+<h3>
+<a id="complete-api-documentation-index" class="anchor" href="#complete-api-documentation-index" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Complete API documentation: <a href="https://gmousse.github.io/dataframe-js/doc/api.html">Index</a>
+</h3>
 
 <ul>
-<li>Core: <a href="./doc/md-api/dataframe.md#DataFrame">DataFrame</a>, <a href="./doc/md-api/row.md#Row">Row</a>, <a href="./doc/md-api/groupedDataframe.md#GroupedDataFrame">GroupedDataFrame</a>
+<li>Core: <a href="https://gmousse.github.io/dataframe-js/doc/api.html#dataframe">DataFrame</a>, <a href="https://gmousse.github.io/dataframe-js/doc/api.html#row">Row</a>, <a href="https://gmousse.github.io/dataframe-js/doc/api.html#groupeddataframe">GroupedDataFrame</a>
 </li>
-<li>Modules: <a href="./doc/md-api/modules/stat.md#Stat">Stat</a>, <a href="./doc/md-api/modules/matrix.md#Matrix">Matrix</a>, <a href="./doc/md-api/modules/sql.md#SQL">SQL</a>
+<li>Modules: <a href="https://gmousse.github.io/dataframe-js/doc/api.html#stat">Stat</a>, <a href="https://gmousse.github.io/dataframe-js/doc/api.html#matrix">Matrix</a>, <a href="https://gmousse.github.io/dataframe-js/doc/api.html#sql">SQL</a>
 </li>
 </ul>
 
 <h3>
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
 
-<p><a href="./examples/titanic_analysis.js">A simple use of DataFrame for data exploration tasks</a></p>
+<p><a href="https://github.com/Gmousse/dataframe-js/blob/master/examples/titanic_analysis.js">A simple use of DataFrame for data exploration tasks</a></p>
 
-<p><a href="./tests/">Unit tests</a></p>
+<p><a href="https://github.com/Gmousse/dataframe-js/blob/master/tests/">Unit tests</a></p>
 
 <h3>
 <a id="import" class="anchor" href="#import" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Import</h3>
@@ -135,7 +141,7 @@
 <span class="pl-k">var</span> DataFrame <span class="pl-k">=</span> <span class="pl-smi">dfjs</span>.<span class="pl-smi">DataFrame</span>;</pre></div>
 
 <h3>
-<a id="dataframe-usage" class="anchor" href="#dataframe-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame usage</h3>
+<a id="core-usage" class="anchor" href="#core-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Core usage</h3>
 
 <h4>
 <a id="dataframe-creation" class="anchor" href="#dataframe-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame Creation</h4>
@@ -164,57 +170,210 @@
 }, [<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>]);
 
 <span class="pl-c">// From files</span>
-<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromText</span>(<span class="pl-s"><span class="pl-pds">'</span>file://my/absolue/path/myfile.txt<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)
-<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromCSV</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.csv<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)
-<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromJSON</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.json<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)</pre></div>
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromText</span>(<span class="pl-s"><span class="pl-pds">'</span>file://my/absolue/path/myfile.txt<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df);
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromCSV</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.csv<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df);
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromJSON</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.json<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df);</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#constructor">DataFrame</a>
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame.fromText">DataFrame.fromText()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame.fromCSV">DataFrame.fromCSV()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame.fromJSON">DataFrame.fromJSON()</a></p>
 
 <h4>
-<a id="dataframe-api-detail" class="anchor" href="#dataframe-api-detail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame API detail</h4>
+<a id="dataframe-export" class="anchor" href="#dataframe-export" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame Export</h4>
 
-<p><a href="./doc/index.md#creation">Creation</a>: Create a DataFrame from files or from JavaScript objects.</p>
+<p>In the same way, you can also export or convert your DataFrame in files or in JavaScript Objects:</p>
 
-<p><a href="./doc/index.md#export">Export</a>: Export a DataFrame in different files format or javascript objects.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, columns);
 
-<p><a href="./doc/index.md#informations">DataFrame informations</a>: Show some informations about your DataFrame.</p>
+<span class="pl-c">// To native objects</span>
+<span class="pl-smi">df</span>.<span class="pl-en">toCollection</span>();
+<span class="pl-smi">df</span>.<span class="pl-en">toArray</span>();
+<span class="pl-smi">df</span>.<span class="pl-en">toDict</span>();
 
-<p><a href="./doc/index.md#columns">Working with Columns</a>: Use Columns to format or to restructure your DataFrame.</p>
+<span class="pl-c">// To files</span>
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">toText</span>(<span class="pl-c1">true</span>, <span class="pl-s"><span class="pl-pds">'</span>;<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>/my/absolue/path/myfile.txt<span class="pl-pds">'</span></span>);
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">toCSV</span>(<span class="pl-s"><span class="pl-pds">'</span>file://my/absolue/path/myfile.csv<span class="pl-pds">'</span></span>);
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">toJSON</span>(<span class="pl-s"><span class="pl-pds">'</span>/my/absolue/path/myfile.json<span class="pl-pds">'</span></span>);</pre></div>
 
-<p><a href="./doc/index.md#rows">Working with Rows</a>: Manipulate and transform rows of your DataFrame.</p>
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toDict">.toDict()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toArray">.toArray()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toCollection">.toCollection()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toText">.toText()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toCSV">.toCSV()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#toJSON">.toJSON()</a></p>
 
-<p><a href="./doc/index.md#row">Working at Row level</a>: Use the Row api to set or get some values when you map, filter or do other Rows manipulations...</p>
+<h4>
+<a id="dataframe-usage" class="anchor" href="#dataframe-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame usage</h4>
 
-<p><a href="./doc/index.md#groupeddataframe">Working with aggregates</a>: Apply aggregations when you groupBy a DataFrame in order to resume your data.</p>
+<p>The main Object of the dataframe-js library is the <a href="https://gmousse.github.io/dataframe-js/doc/api.html#dataframe">DataFrame</a>.
+It provides 3 types of methods:</p>
+
+<p>Informations, giving details about your DataFrame.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">df</span>.<span class="pl-en">show</span>();
+<span class="pl-smi">df</span>.<span class="pl-en">dim</span>();</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#show">.show()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#dim">.dim()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#count">.count()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#listColumns">.listColumns()</a></p>
+
+<p>Columns manipulations, which provide solutions to select, reorganize, cast, join or analyze your data...</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">df</span>.<span class="pl-c1">select</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>);
+<span class="pl-smi">df</span>.<span class="pl-en">cast</span>(<span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>, <span class="pl-c1">String</span>);
+<span class="pl-smi">df</span>.<span class="pl-en">distinct</span>(<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>);
+<span class="pl-smi">df</span>.<span class="pl-en">innerJoin</span>(df2, [<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>]);</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#select">.select()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#withColumn">.withColumn()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#countValue">.countValue()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#distinct">.distinct()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#unique">.unique()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#restructure">.restructure()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#rename">.rename()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#renameAll">.renameAll()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#cast">.cast()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#castAll">.castAll()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#drop">.drop()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#groupBy">.groupBy()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#sortBy">.sortBy()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#join">.join()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#innerJoin">.innerJoin()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#outerJoin">.outerJoin()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#fullJoin">.fullJoin()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#leftJoin">.leftJoin()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#rightJoin">.rightJoin()</a></p>
+
+<p>Rows manipulations, which provide ways to filter, modify, join, complete your data...</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">df</span>.<span class="pl-c1">push</span>([<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>], [<span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>]);
+<span class="pl-smi">df</span>.<span class="pl-en">map</span>(<span class="pl-smi">row</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">row</span>.<span class="pl-c1">set</span>(<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-smi">row</span>.<span class="pl-c1">get</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>) <span class="pl-k">*</span> <span class="pl-c1">2</span>));
+<span class="pl-smi">df</span>.<span class="pl-en">filter</span>(<span class="pl-smi">row</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">row</span>.<span class="pl-c1">get</span>(<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>) <span class="pl-k">!==</span> <span class="pl-c1">4</span>);
+<span class="pl-smi">df</span>.<span class="pl-en">union</span>(df2);</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#transpose">.transpose()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#push">.push()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#replace">.replace()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#chain">.chain()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#map">.map()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#filter">.filter()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#where">.where()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#find">.find()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#reduce">.reduce()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#reduceRight">.reduceRight()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#dropDuplicates">.dropDuplicates()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#shuffle">.shuffle()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#sample">.sample()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#union">.union()</a></p>
+
+<h4>
+<a id="rows-usage" class="anchor" href="#rows-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rows Usage</h4>
+
+<p>As you could see, the Row api is used for example with <a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#map">.map()</a>,
+, <a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#filter">.filter()</a> DataFrame Rows methods.</p>
+
+<p>The Row API provides simple manipulations, to get, set delete or check data in each line of your DataFrames.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">row</span>.<span class="pl-c1">get</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>);
+<span class="pl-smi">row</span>.<span class="pl-c1">set</span>(<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, newValue);</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#constructor">Row</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#get">.get()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#set">.set()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#select">.select()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#delete">.delete()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#has">.has()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#todict">.toDict()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Row#toarray">.toArray()</a></p>
+
+<h4>
+<a id="groupeddataframe-usage" class="anchor" href="#groupeddataframe-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GroupedDataFrame Usage</h4>
+
+<p>When you use the DataFrame <a href="https://gmousse.github.io/dataframe-js/doc/api.html#DataFrame#groupBy">.groupBy()</a> method,  a new GroupedDataFrame object is created.
+It can be used to create DataFrame aggregations (like SQL) in order to resume your data.</p>
+
+<p>Each group in the GroupedDataFrame is a DataFrame. When you aggregate a GroupedDataFrame Object, you get a DataFrame with one line per group, and with a new column "aggregation".</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-k">const</span> <span class="pl-c1">groupedDF</span> <span class="pl-k">=</span> <span class="pl-smi">df</span>.<span class="pl-en">groupBy</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>);
+<span class="pl-smi">groupedDF</span>.<span class="pl-en">aggregate</span>(<span class="pl-smi">group</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">group</span>.<span class="pl-en">count</span>()).<span class="pl-en">rename</span>(<span class="pl-s"><span class="pl-pds">'</span>aggregation<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>groupCount<span class="pl-pds">'</span></span>);
+<span class="pl-smi">df</span>.<span class="pl-en">groupBy</span>(<span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>).<span class="pl-en">aggregate</span>(<span class="pl-smi">group</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">group</span>.<span class="pl-smi">stat</span>.<span class="pl-en">mean</span>(<span class="pl-s"><span class="pl-pds">'</span>column4<span class="pl-pds">'</span></span>)).<span class="pl-en">rename</span>(<span class="pl-s"><span class="pl-pds">'</span>aggregation<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>groupMean<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#constructor">GroupedDataFrame</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#toCollection">.toCollection()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#show">.show()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#listGroups">.listGroups()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#listHashs">.listHashs()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#GroupedDataFrame#aggregate">.aggregate()</a></p>
 
 <h3>
 <a id="modules-usage" class="anchor" href="#modules-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modules Usage</h3>
 
+<p>dataframe-js can increase DataFrame API by using modules. Some modules are included by default, but you can also create your own.</p>
+
 <h4>
-<a id="default-modules-api-details" class="anchor" href="#default-modules-api-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default modules API details</h4>
+<a id="default-modules-usage" class="anchor" href="#default-modules-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default modules usage</h4>
 
-<p><a href="./doc/md-api/index.md#stat">Stat</a></p>
+<p>The <a href="https://gmousse.github.io/dataframe-js/doc/api.html#stat">Stat</a>
+ module provides basic statistical computations on a DataFrame columns.</p>
 
-<p>This module provides basic statistical computations on a DataFrame columns.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">df</span>.<span class="pl-smi">stat</span>.<span class="pl-en">max</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>);
+<span class="pl-smi">df</span>.<span class="pl-smi">stat</span>.<span class="pl-en">mean</span>(<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>);</pre></div>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">stat</span>.<span class="pl-k">*</span></pre></div>
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#min">.min()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#max">.max()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#sum">.sum()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#mean">.mean()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#average">.average()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#var">.var()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#sd">.sd()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Stat#stats">.stats()</a></p>
 
-<p><a href="./doc/md-api/index.md#matrix">Matrix</a></p>
+<p>The <a href="https://gmousse.github.io/dataframe-js/doc/api.html#matrix">Matrix</a> module provides mathematical matrix operations between DataFrames.</p>
 
-<p>This module provides matrix operations between DataFrames.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
+<span class="pl-smi">df</span>.<span class="pl-smi">matrix</span>.<span class="pl-c1">add</span>(df2);
+<span class="pl-smi">df</span>.<span class="pl-smi">matrix</span>.<span class="pl-c1">product</span>(<span class="pl-c1">8</span>);
+<span class="pl-smi">df</span>.<span class="pl-smi">matrix</span>.<span class="pl-en">dot</span>(df2);</pre></div>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">matrix</span>.<span class="pl-k">*</span></pre></div>
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Matrix#isCommutative">.isCommutative()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Matrix#product">.product()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Matrix#dot">.dot()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#Matrix#add">.add()</a></p>
 
-<p><a href="./doc/md-api/index.md#sql">SQL</a></p>
+<p>To finish, the <a href="https://gmousse.github.io/dataframe-js/doc/api.html#sql">SQL</a> module allows you to register temporary tables and to request on these, by using SQL syntax.</p>
 
-<p>This module allows you to register temporary tables and to request on these, by using SQL syntax.</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">sql</span>.<span class="pl-k">*</span>
-
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Some examples</span>
 <span class="pl-c">// Register a tmp table</span>
 <span class="pl-smi">df</span>.<span class="pl-smi">sql</span>.<span class="pl-en">register</span>(<span class="pl-s"><span class="pl-pds">'</span>tmp2<span class="pl-pds">'</span></span>)
 <span class="pl-smi">DataFrame</span>.<span class="pl-smi">sql</span>.<span class="pl-en">registerTable</span>(df, <span class="pl-s"><span class="pl-pds">'</span>tmp2<span class="pl-pds">'</span></span>)
-
 <span class="pl-c">// Request on Table</span>
 <span class="pl-smi">DataFrame</span>.<span class="pl-smi">sql</span>.<span class="pl-en">request</span>(<span class="pl-s"><span class="pl-pds">'</span>SELECT * FROM tmp2 WHERE column1 = 6<span class="pl-pds">'</span></span>)</pre></div>
+
+<p>Complete list:
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL#register">.register()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.registerTable">DataFrame.registerTable()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.request">DataFrame.request()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.listTables">DataFrame.listTables()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.dropTable">DataFrame.dropTable()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.dropTables">DataFrame.dropTables()</a>,
+<a href="https://gmousse.github.io/dataframe-js/doc/api.html#SQL.renameTable">DataFrame.renameTable()</a></p>
 
 <h4>
 <a id="modules-creation" class="anchor" href="#modules-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modules creation</h4>
@@ -244,7 +403,7 @@
 <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">df</span>.<span class="pl-smi">modules</span>);
 <span class="pl-c">// [SQL, Matrix, Stat, FakeModule, AnotherModule]</span></pre></div>
 
-<p>You can also set defaultModules:</p>
+<p>You can also set default modules:</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">DataFrame</span>.<span class="pl-en">setDefaultModules</span>(FakeModule, Matrix);
 <span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, [<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>])
@@ -255,7 +414,7 @@
 <h2>
 <a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribution</h2>
 
-<p><a href="./CONTRIBUTING.md">How to contribute ?</a></p>
+<p><a href="https://github.com/Gmousse/dataframe-js/blob/master/CONTRIBUTING.md">How to contribute ?</a></p>
         </section>
 
         <aside id="sidebar">
