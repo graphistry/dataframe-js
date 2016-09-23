@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Dataframe-js by Gmousse</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Dataframe-js</h1>
+        <h2>A javascript library providing another way to work with data</h2>
+        <a href="https://github.com/Gmousse/dataframe-js" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="dataframe-js" class="anchor" href="#dataframe-js" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dataframe-js</h1>
+
+<p><strong>v1.0.0</strong></p>
+
+<p><img src="https://travis-ci.org/Gmousse/dataframe-js.svg?branch=feature%2Fsql" alt=""></p>
+
+<h2>
+<a id="presentation" class="anchor" href="#presentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Presentation</h2>
+
+<p>dataframe-js provides another way to work with data in javascript (browser or server side) by using DataFrame, a data structure already used in some languages (Python, R, ...).</p>
+
+<p>A DataFrame is simply built on two concepts:</p>
+
+<ul>
+<li>
+<strong>Columns</strong> provide ways to select your data and reorganize them.</li>
+<li>
+<strong>Rows</strong> provide ways to modify or filter your data.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(rawData, columns)
+<span class="pl-smi">df</span>.<span class="pl-en">show</span>()
+<span class="pl-c">// DataFrame example</span>
+<span class="pl-k">|</span> column1   <span class="pl-k">|</span> column2   <span class="pl-k">|</span> column3   <span class="pl-k">|</span> <span class="pl-c">// &lt;--- Columns</span>
+<span class="pl-k">------------------------------------</span>
+<span class="pl-k">|</span> <span class="pl-c1">3</span>         <span class="pl-k">|</span> <span class="pl-c1">3</span>         <span class="pl-k">|</span> <span class="pl-c1">undefined</span> <span class="pl-k">|</span> <span class="pl-c">// &lt;--- Row</span>
+<span class="pl-k">|</span> <span class="pl-c1">6</span>         <span class="pl-k">|</span> <span class="pl-c1">4</span>         <span class="pl-k">|</span> <span class="pl-c1">undefined</span> <span class="pl-k">|</span>
+<span class="pl-k">|</span> <span class="pl-c1">8</span>         <span class="pl-k">|</span> <span class="pl-c1">5</span>         <span class="pl-k">|</span> <span class="pl-c1">undefined</span> <span class="pl-k">|</span>
+<span class="pl-k">|</span> <span class="pl-c1">undefined</span> <span class="pl-k">|</span> <span class="pl-c1">6</span>         <span class="pl-k">|</span> <span class="pl-c1">undefined</span> <span class="pl-k">|</span></pre></div>
+
+<p>dataframe-js provides some <strong>immutable objects</strong> (DataFrame, Row...) and an API closed to <strong>functional</strong> programming and <strong>SQL syntax</strong>. You can sort, groupBy, join, and do complex manipulations with a simple sintax.</p>
+
+<p>It is also compatible (import / export) with native JavaScript objects (Array, Hash...) and other formats (csv, json...).</p>
+
+<p>To resume, dataframe-js contains:</p>
+
+<ul>
+<li>
+<p>A core:</p>
+
+<ul>
+<li>DataFrame: Main Object, similar to sql table providing methods to manipulate and transform data.</li>
+<li>Row: Object contained into a DataFrame, providing lower level manipulations.</li>
+<li>GroupedDataFrame: DataFrame grouped by columns.</li>
+</ul>
+</li>
+<li>
+<p>Some modules:</p>
+
+<ul>
+<li>Stat: Basic statistics computations on DataFrame columns.</li>
+<li>Matrix: Matrix computations (scalar products, ...).</li>
+<li>SQL: SQL requests on DataFrame.</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>via git: <code>npm install git+https://github.com/Gmousse/dataframe-js.git</code></p>
+
+<p>via npm: <code>npm install dataframe-js</code></p>
+
+<p>in the browser:</p>
+
+<ul>
+<li><p>not minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/feature/sql/lib/browser/dataframe.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>minified: <code>&lt;script src="https://cdn.rawgit.com/Gmousse/dataframe-js/feature/sql/lib/browser/dataframe-min.js"&gt;&lt;/script&gt;</code></p></li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Complete API documentation: <a href="./doc/md-api/index.md">Index</a></p>
+
+<ul>
+<li>Core: <a href="./doc/md-api/dataframe.md#DataFrame">DataFrame</a>, <a href="./doc/md-api/row.md#Row">Row</a>, <a href="./doc/md-api/groupedDataframe.md#GroupedDataFrame">GroupedDataFrame</a>
+</li>
+<li>Modules: <a href="./doc/md-api/modules/stat.md#Stat">Stat</a>, <a href="./doc/md-api/modules/matrix.md#Matrix">Matrix</a>, <a href="./doc/md-api/modules/sql.md#SQL">SQL</a>
+</li>
+</ul>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
+
+<p><a href="./examples/titanic_analysis.js">A simple use of DataFrame for data exploration tasks</a></p>
+
+<p><a href="./tests/">Unit tests</a></p>
+
+<h3>
+<a id="import" class="anchor" href="#import" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Import</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// es6</span>
+<span class="pl-k">import</span> { <span class="pl-smi">DataFrame</span>, <span class="pl-smi">Row</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>dataframe-js<span class="pl-pds">'</span></span>;
+<span class="pl-c">// es5</span>
+<span class="pl-k">var</span> DataFrame <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>dataframe-js<span class="pl-pds">'</span></span>).<span class="pl-smi">DataFrame</span>;
+<span class="pl-c">// Browser</span>
+<span class="pl-k">var</span> DataFrame <span class="pl-k">=</span> <span class="pl-smi">dfjs</span>.<span class="pl-smi">DataFrame</span>;</pre></div>
+
+<h3>
+<a id="dataframe-usage" class="anchor" href="#dataframe-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame usage</h3>
+
+<h4>
+<a id="dataframe-creation" class="anchor" href="#dataframe-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame Creation</h4>
+
+<p>You can create a DataFrame by using mutiple ways:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, columns);
+
+<span class="pl-c">// From a collection (easier)</span>
+<span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>([
+    {c1<span class="pl-k">:</span> <span class="pl-c1">1</span>, c2<span class="pl-k">:</span> <span class="pl-c1">6</span>}, <span class="pl-c">// &lt;------- A row</span>
+    {c4<span class="pl-k">:</span> <span class="pl-c1">1</span>, c3<span class="pl-k">:</span> <span class="pl-c1">2</span>}
+], [<span class="pl-s"><span class="pl-pds">'</span>c1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c3<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c4<span class="pl-pds">'</span></span>]);
+
+<span class="pl-c">// From a table</span>
+<span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>([
+    [<span class="pl-c1">1</span>, <span class="pl-c1">6</span>, <span class="pl-c1">9</span>, <span class="pl-c1">10</span>, <span class="pl-c1">12</span>], <span class="pl-c">// &lt;------- A row</span>
+    [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>],
+    [<span class="pl-c1">6</span>, <span class="pl-c1">6</span>, <span class="pl-c1">9</span>, <span class="pl-c1">8</span>, <span class="pl-c1">9</span>, <span class="pl-c1">12</span>],
+], [<span class="pl-s"><span class="pl-pds">'</span>c1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c3<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c4<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c5<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c6<span class="pl-pds">'</span></span>]);
+
+<span class="pl-c">// From a dictionnary (Hash)</span>
+<span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>({
+    column1<span class="pl-k">:</span> [<span class="pl-c1">3</span>, <span class="pl-c1">6</span>, <span class="pl-c1">8</span>], <span class="pl-c">// &lt;------ A column</span>
+    column2<span class="pl-k">:</span> [<span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>],
+}, [<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>]);
+
+<span class="pl-c">// From files</span>
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromText</span>(<span class="pl-s"><span class="pl-pds">'</span>file://my/absolue/path/myfile.txt<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromCSV</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.csv<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)
+<span class="pl-smi">DataFrame</span>.<span class="pl-en">fromJSON</span>(<span class="pl-s"><span class="pl-pds">'</span>http://myurl/myfile.json<span class="pl-pds">'</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">df</span> <span class="pl-k">=&gt;</span> df)</pre></div>
+
+<h4>
+<a id="dataframe-api-detail" class="anchor" href="#dataframe-api-detail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataFrame API detail</h4>
+
+<p><a href="./doc/index.md#creation">Creation</a>: Create a DataFrame from files or from JavaScript objects.</p>
+
+<p><a href="./doc/index.md#export">Export</a>: Export a DataFrame in different files format or javascript objects.</p>
+
+<p><a href="./doc/index.md#informations">DataFrame informations</a>: Show some informations about your DataFrame.</p>
+
+<p><a href="./doc/index.md#columns">Working with Columns</a>: Use Columns to format or to restructure your DataFrame.</p>
+
+<p><a href="./doc/index.md#rows">Working with Rows</a>: Manipulate and transform rows of your DataFrame.</p>
+
+<p><a href="./doc/index.md#row">Working at Row level</a>: Use the Row api to set or get some values when you map, filter or do other Rows manipulations...</p>
+
+<p><a href="./doc/index.md#groupeddataframe">Working with aggregates</a>: Apply aggregations when you groupBy a DataFrame in order to resume your data.</p>
+
+<h3>
+<a id="modules-usage" class="anchor" href="#modules-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modules Usage</h3>
+
+<h4>
+<a id="default-modules-api-details" class="anchor" href="#default-modules-api-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default modules API details</h4>
+
+<p><a href="./doc/md-api/index.md#stat">Stat</a></p>
+
+<p>This module provides basic statistical computations on a DataFrame columns.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">stat</span>.<span class="pl-k">*</span></pre></div>
+
+<p><a href="./doc/md-api/index.md#matrix">Matrix</a></p>
+
+<p>This module provides matrix operations between DataFrames.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">matrix</span>.<span class="pl-k">*</span></pre></div>
+
+<p><a href="./doc/md-api/index.md#sql">SQL</a></p>
+
+<p>This module allows you to register temporary tables and to request on these, by using SQL syntax.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">df</span>.<span class="pl-smi">sql</span>.<span class="pl-k">*</span>
+
+<span class="pl-c">// Register a tmp table</span>
+<span class="pl-smi">df</span>.<span class="pl-smi">sql</span>.<span class="pl-en">register</span>(<span class="pl-s"><span class="pl-pds">'</span>tmp2<span class="pl-pds">'</span></span>)
+<span class="pl-smi">DataFrame</span>.<span class="pl-smi">sql</span>.<span class="pl-en">registerTable</span>(df, <span class="pl-s"><span class="pl-pds">'</span>tmp2<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// Request on Table</span>
+<span class="pl-smi">DataFrame</span>.<span class="pl-smi">sql</span>.<span class="pl-en">request</span>(<span class="pl-s"><span class="pl-pds">'</span>SELECT * FROM tmp2 WHERE column1 = 6<span class="pl-pds">'</span></span>)</pre></div>
+
+<h4>
+<a id="modules-creation" class="anchor" href="#modules-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modules creation</h4>
+
+<p>Each module is a class with a constructor taking dataframe as parameter, and having a df and a name properties:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">class</span> <span class="pl-en">FakeModule</span> {
+    <span class="pl-en">constructor</span>(<span class="pl-smi">dataframe</span>) {
+        <span class="pl-v">this</span>.<span class="pl-smi">df</span> <span class="pl-k">=</span> dataframe;
+        <span class="pl-v">this</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>fakemodule<span class="pl-pds">'</span></span>;
+    }
+
+    <span class="pl-en">test</span>(<span class="pl-smi">x</span>) {
+        <span class="pl-k">return</span> <span class="pl-v">this</span>.<span class="pl-smi">df</span>.<span class="pl-en">withColumn</span>(<span class="pl-s"><span class="pl-pds">'</span>test<span class="pl-pds">'</span></span>, <span class="pl-smi">row</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">row</span>.<span class="pl-c1">set</span>(<span class="pl-s"><span class="pl-pds">'</span>test<span class="pl-pds">'</span></span>, x <span class="pl-k">*</span> <span class="pl-c1">2</span>));
+    }
+}</pre></div>
+
+<h4>
+<a id="modules-registration" class="anchor" href="#modules-registration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modules registration</h4>
+
+<p>You can register modules when you instantiate a DataFrame:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, [<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>], FakeModule, AnotherModule)
+<span class="pl-c">// You can call module by its name</span>
+<span class="pl-smi">df</span>.<span class="pl-smi">fakemodule</span>.<span class="pl-c1">test</span>(<span class="pl-c1">4</span>)
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">df</span>.<span class="pl-smi">modules</span>);
+<span class="pl-c">// [SQL, Matrix, Stat, FakeModule, AnotherModule]</span></pre></div>
+
+<p>You can also set defaultModules:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">DataFrame</span>.<span class="pl-en">setDefaultModules</span>(FakeModule, Matrix);
+<span class="pl-k">const</span> <span class="pl-c1">df</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">DataFrame</span>(data, [<span class="pl-s"><span class="pl-pds">'</span>column1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>column3<span class="pl-pds">'</span></span>])
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">df</span>.<span class="pl-smi">modules</span>);
+<span class="pl-c">// [FakeModule, Matrix]</span></pre></div>
+
+<h2>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribution</h2>
+
+<p><a href="./CONTRIBUTING.md">How to contribute ?</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Gmousse/dataframe-js/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Gmousse/dataframe-js/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Gmousse/dataframe-js"></a> is maintained by <a href="https://github.com/Gmousse">Gmousse</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
