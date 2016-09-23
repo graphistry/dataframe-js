@@ -481,6 +481,19 @@ header h2 {
   position: relative;
   width: 940px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.inner-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-buttons {
+    display: flex;
+    flex-direction: column;
 }
 
 #content-wrapper {
@@ -521,6 +534,7 @@ a.button {
   height: 58px;
   padding-top: 22px;
   padding-left: 68px;
+  margin-bottom: 0.5em;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 23px;
   line-height: 1.2;
@@ -531,7 +545,6 @@ a.button small {
   font-size: 11px;
 }
 header a.button {
-  position: absolute;
   top: 0;
   right: 0;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
@@ -871,6 +884,14 @@ footer a:hover {
     margin-left: 0;
     content: none;
   }
+  .inner-buttons {
+      display: flex;
+      flex-direction: row;
+      align-content: space-around;
+  }
+  .button {
+      margin-right: 1em;
+  }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -878,4 +899,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
-
