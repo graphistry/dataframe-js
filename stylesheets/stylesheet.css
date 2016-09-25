@@ -544,7 +544,17 @@ a.button small {
   display: block;
   font-size: 11px;
 }
-header a.button {
+header a.button-api {
+  top: 0;
+  right: 0;
+  background: transparent url(../images/api-button.png) 0 0 no-repeat;
+}
+header a.button-home {
+  top: 0;
+  right: 0;
+  background: transparent url(../images/home-button.png) 0 0 no-repeat;
+}
+header a.button-github {
   top: 0;
   right: 0;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;

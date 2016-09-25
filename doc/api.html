@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>  | Documentation</title>
+  <title>Dataframe-js API</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -17,8 +17,8 @@
             <h2>A javascript library providing another way to work with data</h2>
         </div>
         <div class="inner-buttons">
-            <a href="https://github.com/Gmousse/dataframe-js" class="button"><small>View project on</small> GitHub</a>
-            <a href="https://gmousse.github.io/dataframe-js/" class="button"><small>Back to the</small> Home</a>
+            <a href="https://github.com/Gmousse/dataframe-js" class="button button-github"><small>View project on</small> GitHub</a>
+            <a href="https://gmousse.github.io/dataframe-js/" class="button button-home"><small>Back to the</small> Home</a>
         </div>
       </div>
     </header>
@@ -706,7 +706,7 @@
       DataFrame
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/dataframe.js#L16-L856'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/dataframe.js#L16-L856'>
       <span>src/dataframe.js</span>
       </a>
 
@@ -1749,7 +1749,7 @@ df.show(<span class="hljs-number">10</span>)
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>transpose(tranposeColumnNames)</span>
+            <span class='code strong strong truncate'>transpose([transposeColumnNames], tranposeColumnNames)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1757,11 +1757,10 @@ df.show(<span class="hljs-number">10</span>)
 
 
 
-  <p>Transpose a DataFrame. Rows become columns and conversely. n x p =&gt; p x n.
-{Boolean} [transposeColumnNames=false] An option to transpose columnNames in a rowNames column.</p>
+  <p>Transpose a DataFrame. Rows become columns and conversely. n x p =&gt; p x n.</p>
 
 
-  <div class='pre p1 fill-light mt0'>transpose(tranposeColumnNames: any): &ETH;ataFrame</div>
+  <div class='pre p1 fill-light mt0'>transpose(transposeColumnNames: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>], tranposeColumnNames: any): &ETH;ataFrame</div>
 
 
 
@@ -1774,6 +1773,16 @@ df.show(<span class="hljs-number">10</span>)
 
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>transposeColumnNames</span> <code class='quiet'>([<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>]
+            (default <code>false</code>)
+            )</code> An option to transpose columnNames in a rowNames column.
+
+          </div>
+
+        </div>
 
         <div class='space-bottom0'>
           <div>
@@ -4478,7 +4487,7 @@ df.join(df2, <span class="hljs-string">'id'</span>, <span class="hljs-string">'r
       GroupedDataFrame
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/groupedDataframe.js#L10-L118'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/groupedDataframe.js#L10-L118'>
       <span>src/groupedDataframe.js</span>
       </a>
 
@@ -4936,7 +4945,7 @@ df.join(df2, <span class="hljs-string">'id'</span>, <span class="hljs-string">'r
       Stat
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/modules/stat.js#L6-L128'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/modules/stat.js#L6-L128'>
       <span>src/modules/stat.js</span>
       </a>
 
@@ -5645,7 +5654,7 @@ Alias from mean.</p>
       Matrix
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/modules/matrix.js#L9-L94'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/modules/matrix.js#L9-L94'>
       <span>src/modules/matrix.js</span>
       </a>
 
@@ -6055,7 +6064,7 @@ Alias from mean.</p>
       SQL
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/modules/sql.js#L9-L102'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/modules/sql.js#L9-L102'>
       <span>src/modules/sql.js</span>
       </a>
 
@@ -6657,7 +6666,7 @@ Alias from mean.</p>
       Row
     </h3>
 
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/3fa200d79c41f0bd78575c7e0f6cc8acb13a465d/src/row.js#L12-L155'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Gmousse/dataframe-js/blob/d2a5439255ea5c8fc1cd441f04e4af9ef1f16260/src/row.js#L12-L155'>
       <span>src/row.js</span>
       </a>
 
